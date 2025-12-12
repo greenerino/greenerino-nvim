@@ -44,4 +44,10 @@ vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 
+-- If we're running outside of Nix, then we need to handle plugin installation
+if not (pcall(require, 'nixCats')) then
+    require('lazy-plugins/bootstrap')
+end
+
+-- Load plugin configuration
 require("plugins")
