@@ -14,3 +14,7 @@ require("nvim-tree").setup({
 vim.keymap.set('n', '<C-n>', ":NvimTreeToggle<CR>")
 vim.keymap.set('n', '<C-f>', ":NvimTreeFindFile<CR>")
 
+
+if (pcall(require, 'nixCats')) then
+    require('pywal').setup()
+end

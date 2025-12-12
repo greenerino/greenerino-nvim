@@ -103,6 +103,7 @@
         general = with pkgs.vimPlugins; [
             nvim-tree-lua
             which-key-nvim
+            pywal-nvim
         ];
       };
 
