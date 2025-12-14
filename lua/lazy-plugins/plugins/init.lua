@@ -8,5 +8,10 @@ return {
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         },
+    },
+    {
+        "folke/which-key.nvim",
+        version = "3.17.0",
+        lazy = false,
     }
 }
