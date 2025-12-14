@@ -102,6 +102,7 @@
         gitPlugins = with pkgs.neovimPlugins; [ ];
         general = with pkgs.vimPlugins; [
             nvim-tree-lua
+            nvim-web-devicons
             which-key-nvim
             pywal-nvim
         ];
