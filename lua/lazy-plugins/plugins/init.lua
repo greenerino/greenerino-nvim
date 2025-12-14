@@ -18,6 +18,6 @@ return {
         "nvim-treesitter/nvim-treesitter",
         version = "0.10.0",
         lazy = false,
-        build = ':TSUpdate'
+        build = ':TSInstall bash clojure comment csv dockerfile fish gdscript gdshader git_config git_rebase gitattributes gitcommit gitignore graphql hcl helm html java json just make markdown markdown_inline mermaid nix python ruby rust sql ssh_config terraform toml yaml | TSUpdate'
     }
 }
