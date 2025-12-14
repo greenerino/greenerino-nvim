@@ -33,7 +33,18 @@ require('which-key').add {
 
 -- Treesitter
 require('nvim-treesitter.configs').setup {
-    highlight = { enable = true }
+    highlight = { enable = true },
+    textobjects = {
+        swap = {
+            enable = true,
+            swap_next = {
+                ["<leader>sw"] = "@parameter.inner",
+            },
+            swap_previous = {
+                ["<leader>sb"] = "@parameter.inner",
+            },
+        },
+    },
 }
 vim.api.nvim_create_autocmd({ "FileType" }, {
     callback = function()

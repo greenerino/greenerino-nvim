@@ -106,6 +106,7 @@
             which-key-nvim
             pywal-nvim
             nvim-treesitter.withAllGrammars
+            nvim-treesitter-textobjects
         ];
       };
 
