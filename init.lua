@@ -45,7 +45,10 @@ vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 
--- If we're running outside of Nix, then we need to handle plugin installation
+-- If we're running outside of Nix, then we need to handle plugin installation.
+-- Not technically the right way to do this, since we may want to stub nixCats for non-nix usage and use the plugin's functionality.
+-- But we aren't yet using that. So just do this for now.
+-- See https://github.com/BirdeeHub/nixCats-nvim/blob/main/templates/example/lua/nixCatsUtils/catPacker.lua#L18
 if not (pcall(require, 'nixCats')) then
     require('lazy-plugins/bootstrap')
 end
