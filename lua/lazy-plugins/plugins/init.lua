@@ -13,5 +13,11 @@ return {
         "folke/which-key.nvim",
         version = "3.17.0",
         lazy = false,
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        version = "0.10.0",
+        lazy = false,
+        build = ':TSUpdate'
     }
 }

@@ -105,6 +105,7 @@
             nvim-web-devicons
             which-key-nvim
             pywal-nvim
+            nvim-treesitter.withAllGrammars
         ];
       };
 
