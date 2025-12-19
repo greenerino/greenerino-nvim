@@ -59,3 +59,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
         end)
     end,
 })
+
+-- vim-notify
+vim.notify = require('notify')
