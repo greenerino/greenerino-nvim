@@ -15,6 +15,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.opt.relativenumber = true
 vim.opt.number = true
 
+vim.opt.colorcolumn = "80"
+
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
@@ -45,6 +47,8 @@ vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 vim.keymap.set('n', '<C-\\>', ':vsplit<CR>')
+vim.keymap.set('n', '+', ':vertical resize +5<CR>')
+vim.keymap.set('n', '_', ':vertical resize -5<CR>')
 
 -- If we're running outside of Nix, then we need to handle plugin installation.
 -- Not technically the right way to do this, since we may want to stub nixCats for non-nix usage and use the plugin's functionality.
