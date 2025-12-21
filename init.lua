@@ -37,9 +37,9 @@ vim.opt.cpoptions:append('I')
 vim.o.expandtab = true
 -- vim.o.smartindent = true
 -- vim.o.autoindent = true
-vim.o.tabstop = 4
+vim.o.tabstop = 2
 -- vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
+vim.o.shiftwidth = 2
 
 -- Navigate splits
 vim.keymap.set('n', '<C-h>', '<C-w>h')
@@ -55,7 +55,7 @@ vim.keymap.set('n', '_', ':vertical resize -5<CR>')
 -- But we aren't yet using that. So just do this for now.
 -- See https://github.com/BirdeeHub/nixCats-nvim/blob/main/templates/example/lua/nixCatsUtils/catPacker.lua#L18
 if not (pcall(require, 'nixCats')) then
-    require('lazy-plugins/bootstrap')
+  require('lazy-plugins/bootstrap')
 end
 
 -- Load plugin configuration
