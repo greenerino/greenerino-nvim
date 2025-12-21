@@ -20,8 +20,9 @@ if (pcall(require, 'nixCats')) then
 end
 
 -- Which-key
-require('which-key').setup()
-require('which-key').add {
+local wk = require('which-key')
+wk.setup()
+wk.add {
   {
     "<leader>?",
     function()
@@ -30,6 +31,7 @@ require('which-key').add {
     desc = "Global Keymaps (which-key)",
   },
 }
+
 
 -- Treesitter
 require('nvim-treesitter.configs').setup {
@@ -62,3 +64,15 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 
 -- vim-notify
 vim.notify = require('notify')
+
+-- fzf
+require('fzf-lua')
+vim.keymap.set('n', '<C-p>', function()
+  local in_git = not not string.find(vim.fn.system { 'git', 'rev-parse', '--is-inside-work-tree' }, 'true')
+  if in_git then
+    FzfLua.git_files({ resume = true })
+  else
+    FzfLua.files({ resume = true })
+  end
+end, { desc = 'Fzf Files' })
+vim.keymap.set('n', '<C-u>', ":FzfLua live_grep resume=true<CR>", { desc = 'Live Grep Project' })

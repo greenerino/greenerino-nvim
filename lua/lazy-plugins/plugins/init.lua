@@ -29,5 +29,10 @@ return {
     "rcarriga/nvim-notify",
     version = "3.15.0",
     lazy = false,
+  },
+  {
+    "ibhagwan/fzf-lua",
+    commit = "9d579feab4d3035627150e5e9b6e8fbf5e814ef6",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
   }
 }

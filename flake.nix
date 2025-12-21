@@ -108,6 +108,7 @@
             nvim-treesitter.withAllGrammars
             nvim-treesitter-textobjects
             nvim-notify
+            fzf-lua
         ];
       };
 
