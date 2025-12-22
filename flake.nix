@@ -109,6 +109,7 @@
             nvim-treesitter-textobjects
             nvim-notify
             fzf-lua
+            dashboard-nvim
         ];
       };
 

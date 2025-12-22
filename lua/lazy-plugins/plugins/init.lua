@@ -34,5 +34,10 @@ return {
     "ibhagwan/fzf-lua",
     commit = "9d579feab4d3035627150e5e9b6e8fbf5e814ef6",
     dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  {
+    "nvimdev/dashboard-nvim",
+    commit = "0775e567b6c0be96d01a61795f7b64c1758262f6",
+    dependencies = { {'nvim-tree/nvim-web-devicons'}}
   }
 }

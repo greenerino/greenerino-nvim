@@ -76,3 +76,17 @@ vim.keymap.set('n', '<C-p>', function()
   end
 end, { desc = 'Fzf Files' })
 vim.keymap.set('n', '<C-u>', ":FzfLua live_grep resume=true<CR>", { desc = 'Live Grep Project' })
+
+-- dashboard-nvim
+require('dashboard').setup({
+  theme = 'hyper',
+  shortcut_type = 'number',
+  config = {
+    week_header = {
+      enable = true
+    },
+    project = {
+      enable = false,
+    }
+  }
+})
