@@ -41,5 +41,10 @@ return {
     commit = "0775e567b6c0be96d01a61795f7b64c1758262f6",
     lazy = false,
     dependencies = { {'nvim-tree/nvim-web-devicons'}}
+  },
+  {
+    "windwp/nvim-autopairs",
+    commit = "7a2c97cccd60abc559344042fefb1d5a85b3e33b",
+    lazy = false
   }
 }

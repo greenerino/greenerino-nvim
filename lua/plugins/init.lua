@@ -90,3 +90,7 @@ require('dashboard').setup({
     }
   }
 })
+
+-- nvim-autopairs
+require('nvim-autopairs').setup({})
+
