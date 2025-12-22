@@ -111,6 +111,7 @@
             fzf-lua
             dashboard-nvim
             nvim-autopairs
+            nvim-surround
         ];
       };
 

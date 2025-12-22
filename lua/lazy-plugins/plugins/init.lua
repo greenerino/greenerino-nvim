@@ -46,5 +46,10 @@ return {
     "windwp/nvim-autopairs",
     commit = "7a2c97cccd60abc559344042fefb1d5a85b3e33b",
     lazy = false
+  },
+  {
+    "kylechui/nvim-surround",
+    commit = "fcfa7e02323d57bfacc3a141f8a74498e1522064",
+    lazy = false
   }
 }

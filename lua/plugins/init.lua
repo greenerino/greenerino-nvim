@@ -94,3 +94,5 @@ require('dashboard').setup({
 -- nvim-autopairs
 require('nvim-autopairs').setup({})
 
+-- nvim-surround
+require('nvim-surround').setup()
