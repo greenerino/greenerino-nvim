@@ -51,5 +51,10 @@ return {
     "kylechui/nvim-surround",
     commit = "fcfa7e02323d57bfacc3a141f8a74498e1522064",
     lazy = false
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    commit = "cdafc320f03f2572c40ab93a4eecb733d4016d07",
+    lazy = false
   }
 }

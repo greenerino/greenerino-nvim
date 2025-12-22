@@ -96,3 +96,36 @@ require('nvim-autopairs').setup({})
 
 -- nvim-surround
 require('nvim-surround').setup()
+
+-- gitsigns
+local function find_buf_by_pattern(pattern)
+  local bufs = vim.api.nvim_list_bufs()
+
+  for _, buf_id in ipairs(bufs) do
+    local buf_name = vim.api.nvim_buf_get_name(buf_id)
+
+    if buf_name:find(pattern) then
+      return buf_id
+    end
+  end
+
+  return nil
+end
+
+local function toggle_git_blame()
+  blame_buf = find_buf_by_pattern("^gitsigns%-blame")
+  if blame_buf then
+    vim.api.nvim_buf_delete(blame_buf, { force = false })
+  else
+    vim.cmd("Gitsigns blame")
+  end
+end
+
+require('gitsigns').setup({
+  current_line_blame = true
+})
+vim.keymap.set('n', ']c', ':Gitsigns nav_hunk next<CR>', { desc = 'Go to next Git hunk' })
+vim.keymap.set('n', '[c', ':Gitsigns nav_hunk prev<CR>', { desc = 'Go to previous Git hunk' })
+vim.keymap.set('n', '<leader>gr', ':Gitsigns reset_hunk<CR>', { desc = 'Restore current Git hunk' })
+vim.keymap.set('n', 'gb', toggle_git_blame, { desc = 'Git blame' })
+
