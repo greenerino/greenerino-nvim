@@ -110,6 +110,7 @@
             nvim-notify
             fzf-lua
             dashboard-nvim
+            nvim-autopairs
         ];
       };
 
