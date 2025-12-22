@@ -112,6 +112,7 @@
             dashboard-nvim
             nvim-autopairs
             nvim-surround
+            gitsigns-nvim
         ];
       };
 
