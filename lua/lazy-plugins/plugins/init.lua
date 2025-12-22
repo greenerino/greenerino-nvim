@@ -3,7 +3,7 @@
 return {
   {
     "nvim-tree/nvim-tree.lua",
-    version = "1.14.0",
+    commit = "3fb91e18a727ecc0385637895ec397dea90be42a",
     lazy = false,
     dependencies = {
       "nvim-tree/nvim-web-devicons",
@@ -11,12 +11,12 @@ return {
   },
   {
     "folke/which-key.nvim",
-    version = "3.17.0",
+    commit = "3aab2147e74890957785941f0c1ad87d0a44c15a",
     lazy = false,
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    version = "0.10.0",
+    commit = "42fc28ba918343ebfd5565147a42a26580579482",
     lazy = false,
     build = ':TSInstall bash clojure comment csv dockerfile fish gdscript gdshader git_config git_rebase gitattributes gitcommit gitignore graphql hcl helm html java json just make markdown markdown_inline mermaid nix python ruby rust sql ssh_config terraform toml yaml | TSUpdate'
   },
@@ -27,17 +27,19 @@ return {
   },
   {
     "rcarriga/nvim-notify",
-    version = "3.15.0",
+    commit = "8701bece920b38ea289b457f902e2ad184131a5d",
     lazy = false,
   },
   {
     "ibhagwan/fzf-lua",
-    commit = "9d579feab4d3035627150e5e9b6e8fbf5e814ef6",
+    commit = "3170d98240266a68c2611fc63260c3ab431575aa",
+    lazy = false,
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
   {
     "nvimdev/dashboard-nvim",
     commit = "0775e567b6c0be96d01a61795f7b64c1758262f6",
+    lazy = false,
     dependencies = { {'nvim-tree/nvim-web-devicons'}}
   }
 }
