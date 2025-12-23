@@ -61,5 +61,10 @@ return {
     "calops/hmts.nvim",
     commit = "a32cd413f7d0a69d7f3d279c631f20cb117c8d30",
     lazy = false
+  },
+  {
+    "Bekaboo/deadcolumn.nvim",
+    commit = "92c86f10bfba2717ca2280e2e759b047135d5288",
+    lazy = false
   }
 }
