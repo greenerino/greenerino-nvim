@@ -121,9 +121,6 @@ local function toggle_git_blame()
   end
 end
 
-require('gitsigns').setup({
-  current_line_blame = true
-})
 vim.keymap.set('n', ']c', ':Gitsigns nav_hunk next<CR>', { desc = 'Go to next Git hunk' })
 vim.keymap.set('n', '[c', ':Gitsigns nav_hunk prev<CR>', { desc = 'Go to previous Git hunk' })
 vim.keymap.set('n', '<leader>gr', ':Gitsigns reset_hunk<CR>', { desc = 'Restore current Git hunk' })
