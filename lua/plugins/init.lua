@@ -128,4 +128,5 @@ vim.keymap.set('n', ']c', ':Gitsigns nav_hunk next<CR>', { desc = 'Go to next Gi
 vim.keymap.set('n', '[c', ':Gitsigns nav_hunk prev<CR>', { desc = 'Go to previous Git hunk' })
 vim.keymap.set('n', '<leader>gr', ':Gitsigns reset_hunk<CR>', { desc = 'Restore current Git hunk' })
 vim.keymap.set('n', 'gb', toggle_git_blame, { desc = 'Git blame' })
+vim.keymap.set('n', 'gB', ':Gitsigns toggle_current_line_blame<CR>', { desc = 'Toggle inline Git blame' })
 
