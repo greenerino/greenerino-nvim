@@ -56,5 +56,10 @@ return {
     "lewis6991/gitsigns.nvim",
     commit = "cdafc320f03f2572c40ab93a4eecb733d4016d07",
     lazy = false
+  },
+  {
+    "calops/hmts.nvim",
+    commit = "a32cd413f7d0a69d7f3d279c631f20cb117c8d30",
+    lazy = false
   }
 }

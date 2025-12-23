@@ -113,6 +113,7 @@
             nvim-autopairs
             nvim-surround
             gitsigns-nvim
+            hmts-nvim
         ];
       };
 
