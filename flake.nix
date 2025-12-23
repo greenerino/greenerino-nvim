@@ -24,6 +24,11 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
+    "plugins-deadcolumn" = {
+      url = "github:Bekaboo/deadcolumn.nvim?rev=92c86f10bfba2717ca2280e2e759b047135d5288";
+      flake = false;
+    };
+
     # neovim-nightly-overlay = {
     #   url = "github:nix-community/neovim-nightly-overlay";
     # };
@@ -114,6 +119,7 @@
             nvim-surround
             gitsigns-nvim
             hmts-nvim
+            pkgs.neovimPlugins.deadcolumn
         ];
       };
 

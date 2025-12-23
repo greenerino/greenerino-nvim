@@ -31,10 +31,28 @@
         "type": "github"
       }
     },
+    "plugins-deadcolumn": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1756951626,
+        "narHash": "sha256-uYiq6ZbvbHf5eY5EUW70CamlB7DHMY5CQu2hicoCY5I=",
+        "owner": "Bekaboo",
+        "repo": "deadcolumn.nvim",
+        "rev": "92c86f10bfba2717ca2280e2e759b047135d5288",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Bekaboo",
+        "repo": "deadcolumn.nvim",
+        "rev": "92c86f10bfba2717ca2280e2e759b047135d5288",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "nixCats": "nixCats",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "plugins-deadcolumn": "plugins-deadcolumn"
       }
     }
   },
