@@ -99,6 +99,7 @@
       # this includes LSPs
       lspsAndRuntimeDeps = {
         general = with pkgs; [
+          lua-language-server
         ];
       };
 
@@ -120,6 +121,8 @@
             gitsigns-nvim
             hmts-nvim
             pkgs.neovimPlugins.deadcolumn
+            blink-cmp
+            lazydev-nvim
         ];
       };
 

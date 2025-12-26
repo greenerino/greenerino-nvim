@@ -113,7 +113,7 @@ local function find_buf_by_pattern(pattern)
 end
 
 local function toggle_git_blame()
-  blame_buf = find_buf_by_pattern("^gitsigns%-blame")
+  local blame_buf = find_buf_by_pattern("^gitsigns%-blame")
   if blame_buf then
     vim.api.nvim_buf_delete(blame_buf, { force = false })
   else
@@ -127,3 +127,53 @@ vim.keymap.set('n', '<leader>gr', ':Gitsigns reset_hunk<CR>', { desc = 'Restore 
 vim.keymap.set('n', 'gb', toggle_git_blame, { desc = 'Git blame' })
 vim.keymap.set('n', 'gB', ':Gitsigns toggle_current_line_blame<CR>', { desc = 'Toggle inline Git blame' })
 
+-- LSPs
+
+vim.diagnostic.config({
+  virtual_text = true
+})
+
+vim.lsp.enable('luals')
+
+-- blink.cmp
+require("blink.cmp").setup({
+  -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
+  -- See :h blink-cmp-config-keymap for configuring keymaps
+  keymap = {
+    preset = 'default',
+    ['<S-k>'] = { 'show_signature', 'hide_signature', 'fallback' },
+  },
+  cmdline = {
+    enabled = true,
+    completion = {
+      menu = {
+        auto_show = true,
+      },
+    },
+  },
+  fuzzy = {
+    sorts = {
+      'exact',
+      -- defaults
+      'score',
+      'sort_text',
+    },
+  },
+  signature = {
+    enabled = true,
+    window = {
+      show_documentation = true,
+    },
+  },
+  sources = {
+    default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+    providers = {
+      lazydev = {
+        name = "LazyDev",
+        module = "lazydev.integrations.blink",
+        -- make lazydev completions top priority (see `:h blink.cmp`)
+        score_offset = 100,
+      }
+    }
+  }
+})
