@@ -137,8 +137,6 @@ vim.lsp.enable('luals')
 
 -- blink.cmp
 require("blink.cmp").setup({
-  -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
-  -- See :h blink-cmp-config-keymap for configuring keymaps
   keymap = {
     preset = 'none',
     ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
