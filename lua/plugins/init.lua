@@ -135,6 +135,10 @@ vim.diagnostic.config({
 
 vim.lsp.enable('luals')
 
+if (pcall(require, 'nixCats')) then
+  vim.lsp.enable('nixd')
+end
+
 -- blink.cmp
 require('blink.cmp').setup({
   keymap = {
