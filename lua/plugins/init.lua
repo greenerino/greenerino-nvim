@@ -137,6 +137,7 @@ vim.lsp.enable('luals')
 
 if (pcall(require, 'nixCats')) then
   vim.lsp.enable('nixd')
+  vim.lsp.enable('hyprls')
 end
 
 -- blink.cmp
