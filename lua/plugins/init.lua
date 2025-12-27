@@ -140,8 +140,34 @@ require("blink.cmp").setup({
   -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
   -- See :h blink-cmp-config-keymap for configuring keymaps
   keymap = {
-    preset = 'default',
+    preset = 'none',
+    ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+    ['<S-Esc>'] = { 'hide', 'fallback' },
+    ['<Tab>'] = {
+      function(cmp)
+        if cmp.snippet_active() then
+          return cmp.accept()
+        else
+          return cmp.select_and_accept()
+        end
+      end,
+      'select_and_accept', 'fallback' },
+
+    ['<Up>'] = { 'select_prev', 'fallback' },
+    ['<Down>'] = { 'select_next', 'fallback' },
+
+    ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
+    ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
+
     ['<S-k>'] = { 'show_signature', 'hide_signature', 'fallback' },
+  },
+  completion = {
+    list = {
+      selection = {
+        preselect = true,
+        auto_insert = false
+      }
+    }
   },
   cmdline = {
     enabled = true,
