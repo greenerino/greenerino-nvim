@@ -149,7 +149,8 @@ require("blink.cmp").setup({
           return cmp.select_and_accept()
         end
       end,
-      'select_and_accept', 'fallback' },
+      'select_and_accept',
+      'fallback' },
 
     ['<Up>'] = { 'select_prev', 'fallback' },
     ['<Down>'] = { 'select_next', 'fallback' },
@@ -190,14 +191,8 @@ require("blink.cmp").setup({
     },
   },
   sources = {
-    default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+    default = { "lsp", "path", "snippets", "buffer" },
     providers = {
-      lazydev = {
-        name = "LazyDev",
-        module = "lazydev.integrations.blink",
-        -- make lazydev completions top priority (see `:h blink.cmp`)
-        score_offset = 100,
-      }
     }
   }
 })

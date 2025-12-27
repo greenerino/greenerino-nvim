@@ -122,7 +122,6 @@
             hmts-nvim
             pkgs.neovimPlugins.deadcolumn
             blink-cmp
-            lazydev-nvim
         ];
       };
 

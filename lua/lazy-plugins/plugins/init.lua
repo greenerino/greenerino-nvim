@@ -71,10 +71,5 @@ return {
     "saghen/blink.cmp",
     version = "1.8.0",
     lazy = false
-  },
-  {
-    "folke/lazydev.nvim",
-    commit = "5231c62aa83c2f8dc8e7ba957aa77098cda1257d",
-    lazy = false
   }
 }
