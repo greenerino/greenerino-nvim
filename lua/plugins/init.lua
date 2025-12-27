@@ -64,6 +64,10 @@ vim.api.nvim_create_autocmd({ 'FileType' }, {
 
 -- vim-notify
 vim.notify = require('notify')
+vim.notify.setup({
+  render = 'wrapped-default',
+  max_width = 50
+})
 
 -- fzf
 require('fzf-lua')
