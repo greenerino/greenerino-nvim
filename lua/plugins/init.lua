@@ -228,3 +228,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'Setup format on save',
   callback = setup_autoformat,
 })
+
+-- Comments
+require('Comment').setup()

@@ -122,6 +122,7 @@
             hmts-nvim
             pkgs.neovimPlugins.deadcolumn
             blink-cmp
+            comment-nvim
         ];
       };
 

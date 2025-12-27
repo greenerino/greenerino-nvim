@@ -72,5 +72,10 @@ return {
     'saghen/blink.cmp',
     version = '1.8.0',
     lazy = false
+  },
+  {
+    'numToStr/Comment.nvim',
+    commit = 'e30b7f2008e52442154b66f7c519bfd2f1e32acb',
+    lazy = false
   }
 }
