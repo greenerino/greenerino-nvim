@@ -18,7 +18,8 @@ return {
     "nvim-treesitter/nvim-treesitter",
     commit = "42fc28ba918343ebfd5565147a42a26580579482",
     lazy = false,
-    build = ':TSInstall bash clojure comment csv dockerfile fish gdscript gdshader git_config git_rebase gitattributes gitcommit gitignore graphql hcl helm html java json just make markdown markdown_inline mermaid nix python ruby rust sql ssh_config terraform toml yaml | TSUpdate'
+    build =
+    ':TSInstall bash clojure comment csv dockerfile fish gdscript gdshader git_config git_rebase gitattributes gitcommit gitignore graphql hcl helm html java json just make markdown markdown_inline mermaid nix python ruby rust sql ssh_config terraform toml yaml | TSUpdate'
   },
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
@@ -40,7 +41,7 @@ return {
     "nvimdev/dashboard-nvim",
     commit = "0775e567b6c0be96d01a61795f7b64c1758262f6",
     lazy = false,
-    dependencies = { {'nvim-tree/nvim-web-devicons'}}
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
   {
     "windwp/nvim-autopairs",
