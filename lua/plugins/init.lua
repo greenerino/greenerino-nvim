@@ -1,7 +1,7 @@
 -- nvim-tree
-require("nvim-tree").setup({
+require('nvim-tree').setup({
   sort = {
-    sorter = "case_sensitive",
+    sorter = 'case_sensitive',
   },
   view = {
     width = 30,
@@ -11,8 +11,8 @@ require("nvim-tree").setup({
   },
 })
 
-vim.keymap.set('n', '<C-n>', ":NvimTreeToggle<CR>")
-vim.keymap.set('n', '<C-f>', ":NvimTreeFindFile<CR>")
+vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
+vim.keymap.set('n', '<C-f>', ':NvimTreeFindFile<CR>')
 
 -- Pywal colors, only for Nix right now
 if (pcall(require, 'nixCats')) then
@@ -24,11 +24,11 @@ local wk = require('which-key')
 wk.setup()
 wk.add {
   {
-    "<leader>?",
+    '<leader>?',
     function()
-      require("which-key").show({ global = true })
+      require('which-key').show({ global = true })
     end,
-    desc = "Global Keymaps (which-key)",
+    desc = 'Global Keymaps (which-key)',
   },
 }
 
@@ -40,22 +40,22 @@ require('nvim-treesitter.configs').setup {
     swap = {
       enable = true,
       swap_next = {
-        ["<leader>sw"] = "@parameter.inner",
+        ['<leader>sw'] = '@parameter.inner',
       },
       swap_previous = {
-        ["<leader>sb"] = "@parameter.inner",
+        ['<leader>sb'] = '@parameter.inner',
       },
     },
   },
 }
-vim.api.nvim_create_autocmd({ "FileType" }, {
+vim.api.nvim_create_autocmd({ 'FileType' }, {
   callback = function()
     vim.schedule(function()
-      if require("nvim-treesitter.parsers").has_parser() then
-        vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
-        vim.opt.foldmethod = "expr"
+      if require('nvim-treesitter.parsers').has_parser() then
+        vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+        vim.opt.foldmethod = 'expr'
       else
-        vim.opt.foldmethod = "syntax"
+        vim.opt.foldmethod = 'syntax'
       end
       vim.opt.foldlevel = 99
     end)
@@ -75,7 +75,7 @@ vim.keymap.set('n', '<C-p>', function()
     FzfLua.files({ resume = true })
   end
 end, { desc = 'Fzf Files' })
-vim.keymap.set('n', '<C-u>', ":FzfLua live_grep resume=true<CR>", { desc = 'Live Grep Project' })
+vim.keymap.set('n', '<C-u>', ':FzfLua live_grep resume=true<CR>', { desc = 'Live Grep Project' })
 
 -- dashboard-nvim
 require('dashboard').setup({
@@ -113,11 +113,11 @@ local function find_buf_by_pattern(pattern)
 end
 
 local function toggle_git_blame()
-  local blame_buf = find_buf_by_pattern("^gitsigns%-blame")
+  local blame_buf = find_buf_by_pattern('^gitsigns%-blame')
   if blame_buf then
     vim.api.nvim_buf_delete(blame_buf, { force = false })
   else
-    vim.cmd("Gitsigns blame")
+    vim.cmd('Gitsigns blame')
   end
 end
 
@@ -136,7 +136,7 @@ vim.diagnostic.config({
 vim.lsp.enable('luals')
 
 -- blink.cmp
-require("blink.cmp").setup({
+require('blink.cmp').setup({
   keymap = {
     preset = 'none',
     ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
@@ -191,7 +191,7 @@ require("blink.cmp").setup({
     },
   },
   sources = {
-    default = { "lsp", "path", "snippets", "buffer" },
+    default = { 'lsp', 'path', 'snippets', 'buffer' },
     providers = {}
   }
 })
