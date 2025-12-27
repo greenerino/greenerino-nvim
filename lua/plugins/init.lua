@@ -14,10 +14,8 @@ require('nvim-tree').setup({
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<C-f>', ':NvimTreeFindFile<CR>')
 
--- Pywal colors, only for Nix right now
-if (pcall(require, 'nixCats')) then
-  require('pywal').setup()
-end
+-- vim.cmd('colorscheme nord')
+vim.cmd('colorscheme catppuccin-frappe')
 
 -- Which-key
 local wk = require('which-key')

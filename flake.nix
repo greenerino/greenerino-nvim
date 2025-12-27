@@ -130,7 +130,7 @@
               nvim-tree-lua
               nvim-web-devicons
               which-key-nvim
-              pywal-nvim
+              catppuccin-nvim
               nvim-treesitter.withAllGrammars
               nvim-treesitter-textobjects
               nvim-notify
