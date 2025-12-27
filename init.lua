@@ -12,6 +12,8 @@ vim.opt.termguicolors = true
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.cmd('cnoreabbrev <expr> h getcmdtype() == ":" && getcmdline() == "h" ? "vert belowright h" : "h"')
+
 vim.opt.relativenumber = true
 vim.opt.number = true
 
