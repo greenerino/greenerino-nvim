@@ -134,6 +134,7 @@ vim.diagnostic.config({
 })
 
 vim.lsp.enable('luals')
+vim.lsp.enable('godot')
 
 if (pcall(require, 'nixCats')) then
   vim.lsp.enable('nixd')
