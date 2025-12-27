@@ -17,7 +17,7 @@ vim.cmd('cnoreabbrev <expr> h getcmdtype() == ":" && getcmdline() == "h" ? "vert
 vim.opt.relativenumber = true
 vim.opt.number = true
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = '80'
 
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
@@ -61,4 +61,4 @@ if not (pcall(require, 'nixCats')) then
 end
 
 -- Load plugin configuration
-require("plugins")
+require('plugins')
