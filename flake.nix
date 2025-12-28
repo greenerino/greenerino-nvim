@@ -124,6 +124,7 @@
               # work LSPs
               # TODO put in a different category
               clojure-lsp
+              python313Packages.python-lsp-server
             ];
           };
 
