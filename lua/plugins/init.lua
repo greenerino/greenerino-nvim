@@ -140,6 +140,7 @@ vim.lsp.enable('godot')
 
 -- Work LSPs
 vim.lsp.enable('clojure')
+vim.lsp.enable('ruby')
 
 
 if (pcall(require, 'nixCats')) then
