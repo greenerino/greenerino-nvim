@@ -120,6 +120,7 @@
               lua-language-server
               nixd
               hyprls
+              yaml-language-server
 
               # work LSPs
               # TODO put in a different category

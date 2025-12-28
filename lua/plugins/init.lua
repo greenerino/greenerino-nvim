@@ -135,8 +135,10 @@ vim.diagnostic.config({
   virtual_text = true
 })
 
+-- General
 vim.lsp.enable('luals')
 vim.lsp.enable('godot')
+vim.lsp.enable('yaml')
 
 -- Work LSPs
 vim.lsp.enable('clojure')
@@ -144,6 +146,7 @@ vim.lsp.enable('ruby')
 vim.lsp.enable('python')
 
 
+-- Nix Only
 if (pcall(require, 'nixCats')) then
   vim.lsp.enable('nixd')
   vim.lsp.enable('hyprls')
