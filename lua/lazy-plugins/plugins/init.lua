@@ -82,5 +82,14 @@ return {
     'catppuccin/nvim',
     commit = 'da33755d00e09bff2473978910168ff9ea5dc453',
     lazy = false
+  },
+
+
+  -- Work Plugins
+  -- It's ok for these versions to drift from Nix
+  {
+    'Olical/conjure',
+    version = '4.58.0',
+    lazy = false
   }
 }

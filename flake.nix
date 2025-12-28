@@ -120,6 +120,10 @@
               lua-language-server
               nixd
               hyprls
+
+              # work LSPs
+              # TODO put in a different category
+              clojure-lsp
             ];
           };
 
@@ -143,6 +147,10 @@
               pkgs.neovimPlugins.deadcolumn
               blink-cmp
               comment-nvim
+
+              # work plugins
+              # TODO put in a different category
+              conjure
             ];
           };
 

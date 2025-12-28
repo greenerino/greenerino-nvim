@@ -138,6 +138,10 @@ vim.diagnostic.config({
 vim.lsp.enable('luals')
 vim.lsp.enable('godot')
 
+-- Work LSPs
+vim.lsp.enable('clojure')
+
+
 if (pcall(require, 'nixCats')) then
   vim.lsp.enable('nixd')
   vim.lsp.enable('hyprls')
