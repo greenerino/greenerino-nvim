@@ -149,10 +149,11 @@
               pkgs.neovimPlugins.deadcolumn
               blink-cmp
               comment-nvim
+              galaxyline-nvim
 
               # work plugins
               # TODO put in a different category
-              conjure
+              conjure # Apparently also good for Lua, so maybe should be general
             ];
           };
 

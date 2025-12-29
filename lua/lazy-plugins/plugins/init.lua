@@ -83,6 +83,11 @@ return {
     commit = 'da33755d00e09bff2473978910168ff9ea5dc453',
     lazy = false
   },
+  {
+    'NTBBloodbath/galaxyline.nvim',
+    commit = '4d4f5fc8e20a10824117e5beea7ec6e445466a8f',
+    lazy = false
+  },
 
 
   -- Work Plugins

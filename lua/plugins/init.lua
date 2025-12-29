@@ -15,6 +15,10 @@ vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<C-f>', ':NvimTreeFindFile<CR>')
 
 -- vim.cmd('colorscheme nord')
+require('catppuccin').setup({
+  auto_integrations = true
+
+})
 vim.cmd('colorscheme catppuccin-frappe')
 
 -- Which-key
@@ -248,3 +252,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 -- Comments
 require('Comment').setup()
+
+-- Conjure
+vim.g['conjure#mapping#doc_word'] = 'gk'
+
+-- Galaxyline
+require('plugins/user/galaxyline')
