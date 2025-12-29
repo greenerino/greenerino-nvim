@@ -46,9 +46,9 @@ local colors = (function()
   local terminal = get_color('PreProc', 'fg')
   local command = get_color('Identifier', 'fg')
   local replace = get_color('Identifier', 'fg')
-  local git_add = get_color('diffAdded', 'fg')
-  local git_remove = get_color('diffRemoved', 'fg')
-  local git_change = get_color('diffChanged', 'fg')
+  local git_add = get_color('Added', 'fg')
+  local git_remove = get_color('Removed', 'fg')
+  local git_change = get_color('Changed', 'fg')
   return {
     dark_bg = dark_bg,
     mid_bg = mid_bg,

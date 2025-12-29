@@ -14,7 +14,6 @@ require('nvim-tree').setup({
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<C-f>', ':NvimTreeFindFile<CR>')
 
--- vim.cmd('colorscheme nord')
 require('catppuccin').setup({
   auto_integrations = true
 
