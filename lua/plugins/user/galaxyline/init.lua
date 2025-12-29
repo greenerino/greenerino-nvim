@@ -184,7 +184,7 @@ insert_left {
 
 insert_left {
   LspClient = {
-    provider = 'GetLspClient',
+    provider = require('plugins.user.galaxyline.providers.lsp'),
     icon = ' ',
     highlight = { colors.fg, colors.mid_bg }
   },
