@@ -33,7 +33,8 @@ local colors = (function()
   -- Grab colors based on current colorscheme
 
   local get_color = function(hl_name, field)
-    return '#' .. string.format('%x', vim.api.nvim_get_hl(0, { name = hl_name })[field])
+    local val = vim.api.nvim_get_hl(0, { name = hl_name })[field] or math.random(0, 16777216)
+    return '#' .. string.format('%x', val)
   end
 
   local dark_bg = get_color('StatusLine', 'bg')
