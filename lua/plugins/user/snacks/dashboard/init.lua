@@ -85,7 +85,7 @@ require('snacks')
 -- Monkeypatch the built in function that is only compatible with lazy.nvim.
 -- This allows session restoration to work.
 -- No need to implement for real. Just tell it to use persistence.nvim.
--- https://github.com/folke/snacks.nvim/blob/e440df387d448a2ec332442a0eca6ece685f2b4d/lua/snacks/dashboard.lua#L841
+-- https://github.com/folke/snacks.nvim/blob/fe7cfe9800a182274d0f868a74b7263b8c0c020b/lua/snacks/dashboard.lua#L841
 require('snacks.dashboard').have_plugin = function(name)
   return name == 'persistence.nvim'
 end
