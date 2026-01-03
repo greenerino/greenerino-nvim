@@ -70,9 +70,25 @@ local opts = {
       ttl = 5 * 60,
       indent = 2
     },
-    { section = 'startup' },
+    {
+      section = 'startup',
+      enabled = function()
+        return not not pcall(require, 'lazy.stats')
+      end
+    },
   },
 }
+
+-- Load Snacks and ensure the Global `Snacks` variable is available
+require('snacks')
+
+-- Monkeypatch the built in function that is only compatible with lazy.nvim.
+-- This allows session restoration to work.
+-- No need to implement for real. Just tell it to use persistence.nvim.
+-- https://github.com/folke/snacks.nvim/blob/e440df387d448a2ec332442a0eca6ece685f2b4d/lua/snacks/dashboard.lua#L841
+require('snacks.dashboard').have_plugin = function(name)
+  return name == 'persistence.nvim'
+end
 
 require('snacks').setup({
   dashboard = opts

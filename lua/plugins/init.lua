@@ -82,9 +82,6 @@ vim.keymap.set('n', '<C-p>', function()
 end, { desc = 'Fzf Files' })
 vim.keymap.set('n', '<C-u>', ':FzfLua live_grep resume=true<CR>', { desc = 'Live Grep Project' })
 
--- snacks.dashboard
-require('plugins.user.snacks.dashboard')
-
 -- nvim-autopairs
 require('nvim-autopairs').setup({})
 
@@ -252,3 +249,6 @@ require('plugins/user/galaxyline')
 
 -- Persistence
 require('persistence').setup()
+
+-- snacks.dashboard
+require('plugins.user.snacks.dashboard')
