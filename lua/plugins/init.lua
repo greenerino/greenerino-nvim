@@ -82,19 +82,8 @@ vim.keymap.set('n', '<C-p>', function()
 end, { desc = 'Fzf Files' })
 vim.keymap.set('n', '<C-u>', ':FzfLua live_grep resume=true<CR>', { desc = 'Live Grep Project' })
 
--- dashboard-nvim
-require('dashboard').setup({
-  theme = 'hyper',
-  shortcut_type = 'number',
-  config = {
-    week_header = {
-      enable = true
-    },
-    project = {
-      enable = false,
-    }
-  }
-})
+-- snacks.dashboard
+require('plugins.user.snacks.dashboard')
 
 -- nvim-autopairs
 require('nvim-autopairs').setup({})
@@ -260,3 +249,6 @@ vim.g['conjure#mapping#doc_word'] = 'gk'
 
 -- Galaxyline
 require('plugins/user/galaxyline')
+
+-- Persistence
+require('persistence').setup()

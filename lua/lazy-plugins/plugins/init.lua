@@ -38,12 +38,6 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
   },
   {
-    'nvimdev/dashboard-nvim',
-    commit = '0775e567b6c0be96d01a61795f7b64c1758262f6',
-    lazy = false,
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
-  },
-  {
     'windwp/nvim-autopairs',
     commit = '7a2c97cccd60abc559344042fefb1d5a85b3e33b',
     lazy = false
@@ -86,6 +80,16 @@ return {
   {
     'NTBBloodbath/galaxyline.nvim',
     commit = '4d4f5fc8e20a10824117e5beea7ec6e445466a8f',
+    lazy = false
+  },
+  {
+    'folke/snacks.nvim',
+    commit = 'fe7cfe9800a182274d0f868a74b7263b8c0c020b',
+    lazy = false
+  },
+  {
+    'folke/persistence.nvim',
+    commit = 'b20b2a7887bd39c1a356980b45e03250f3dce49c',
     lazy = false
   },
 

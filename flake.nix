@@ -150,6 +150,8 @@
               blink-cmp
               comment-nvim
               galaxyline-nvim
+              persistence-nvim
+              snacks-nvim
 
               # work plugins
               # TODO put in a different category
