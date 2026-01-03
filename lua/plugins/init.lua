@@ -249,6 +249,15 @@ require('plugins/user/galaxyline')
 
 -- Persistence
 require('persistence').setup()
+local openPersistenceMenu = function()
+  local p = require('persistence')
+  if p.active() then
+    p.save()
+  end
+  p.select()
+end
+vim.keymap.set('n', '<leader>qs', openPersistenceMenu)
+
 
 -- snacks.dashboard
 require('plugins.user.snacks.dashboard')
