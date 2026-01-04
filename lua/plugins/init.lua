@@ -249,14 +249,15 @@ require('plugins/user/galaxyline')
 
 -- Persistence
 require('persistence').setup()
-local openPersistenceMenu = function()
+vim.keymap.set('n', '<leader>qs', function()
+  -- Be sure to save the current session in case we switch.
+  -- This allows us to switch back.
   local p = require('persistence')
   if p.active() then
     p.save()
   end
   p.select()
-end
-vim.keymap.set('n', '<leader>qs', openPersistenceMenu)
+end, { desc = 'Open Session Menu' })
 
 
 -- snacks.dashboard
