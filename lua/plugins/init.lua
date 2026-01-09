@@ -80,7 +80,7 @@ vim.keymap.set('n', '<C-p>', function()
     FzfLua.files({ resume = true })
   end
 end, { desc = 'Fzf Files' })
-vim.keymap.set('n', '<C-u>', ':FzfLua live_grep resume=true<CR>', { desc = 'Live Grep Project' })
+vim.keymap.set('n', '<C-u>', ':FzfLua live_grep resume=true<CR><C-g>', { desc = 'Live Grep Project' })
 
 -- nvim-autopairs
 require('nvim-autopairs').setup({})
