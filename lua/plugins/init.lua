@@ -71,16 +71,24 @@ vim.notify.setup({
 })
 
 -- fzf
-require('fzf-lua')
+local fzflua = require('fzf-lua')
 vim.keymap.set('n', '<C-p>', function()
   local in_git = not not string.find(vim.fn.system { 'git', 'rev-parse', '--is-inside-work-tree' }, 'true')
   if in_git then
-    FzfLua.git_files({ resume = true })
+    fzflua.git_files({ resume = true })
   else
-    FzfLua.files({ resume = true })
+    fzflua.files({ resume = true })
   end
 end, { desc = 'Fzf Files' })
 vim.keymap.set('n', '<C-u>', ':FzfLua live_grep resume=true<CR><C-g>', { desc = 'Live Grep Project' })
+
+vim.keymap.set('v', '<C-u>', function()
+  local mode = vim.api.nvim_get_mode().mode
+  local start_pos = vim.fn.getpos('v')
+  local end_pos = vim.fn.getpos('.')
+  local text = table.concat(vim.fn.getregion(start_pos, end_pos, { type = mode }))
+  fzflua.live_grep({ search = text })
+end, { desc = 'Live Grep Selection' })
 
 -- nvim-autopairs
 require('nvim-autopairs').setup({})
