@@ -56,7 +56,7 @@ local opts = {
   sections = {
     { section = 'header' },
     { title = 'Get Right Into It', section = 'keys',         indent = 2, padding = 1 },
-    { title = 'Projects',          section = 'projects',     indent = 2, padding = 1 },
+    { title = 'Projects',          section = 'projects',     indent = 2, padding = 1, limit = 10 },
     { title = 'Recent Files',      section = 'recent_files', indent = 2, padding = 1 },
     {
       title = 'Git Status',
