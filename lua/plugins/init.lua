@@ -14,6 +14,27 @@ require('nvim-tree').setup({
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<C-f>', ':NvimTreeFindFile<CR>')
 
+local nvim_tree_ensure_state = function()
+  local api = require('nvim-tree.api')
+
+  -- Fix issue where nvim tree is blank after session restore.
+  -- Just open it every time. Helps ground you when switching.
+  api.tree.open()
+
+  -- Ensure the root matches in case we switch our session
+  local global_cwd = vim.fn.getcwd(-1, -1)
+  api.tree.change_root(global_cwd)
+end
+vim.api.nvim_create_autocmd({ 'BufEnter' }, {
+  pattern = 'NvimTree*',
+  callback = nvim_tree_ensure_state,
+})
+vim.api.nvim_create_autocmd({ 'User' }, {
+  pattern = 'PersistenceLoadPost',
+  callback = nvim_tree_ensure_state
+})
+
+-- Colors
 require('catppuccin').setup({
   auto_integrations = true
 
