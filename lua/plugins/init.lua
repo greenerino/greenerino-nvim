@@ -306,6 +306,21 @@ require('noice').setup({
         pattern = '^:vert belowright h%s+',
         icon = ''
       },
+      filter = {
+        title = 'Terminal Command',
+        pattern = '^:%s*!',
+        icon = '$',
+        lang = 'bash'
+      }
+    },
+  },
+  routes = {
+    {
+      view = 'notify',
+      filter = {
+        event = 'msg_show',
+        kind = { '', 'echo', 'echomsg', 'lua_print', 'list_cmd', 'shell_out', 'shell_err', 'shell_ret' }
+      }
     }
   }
 })
