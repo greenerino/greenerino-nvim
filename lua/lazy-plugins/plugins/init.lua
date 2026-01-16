@@ -92,6 +92,16 @@ return {
     commit = 'b20b2a7887bd39c1a356980b45e03250f3dce49c',
     lazy = false
   },
+  {
+    'MunifTanjim/nui.nvim',
+    version = '0.4.0',
+    lazy = false
+  },
+  {
+    'folke/noice.nvim',
+    commit = '7bfd942445fb63089b59f97ca487d605e715f155',
+    lazy = false
+  },
 
 
   -- Work Plugins

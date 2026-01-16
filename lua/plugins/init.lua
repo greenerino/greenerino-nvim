@@ -291,3 +291,21 @@ end, { desc = 'Open Session Menu' })
 
 -- snacks.dashboard
 require('plugins.user.snacks.dashboard')
+
+-- noice
+require('noice').setup({
+  presets = {
+    command_palette = false,
+    bottom_search = true,
+    lsp_doc_border = true
+  },
+  cmdline = {
+    format = {
+      vert_help = {
+        title = 'Help (Vertical)',
+        pattern = '^:vert belowright h%s+',
+        icon = ''
+      },
+    }
+  }
+})
