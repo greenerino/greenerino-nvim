@@ -151,6 +151,8 @@
               galaxyline-nvim
               persistence-nvim
               snacks-nvim
+              noice-nvim
+              nui-nvim # required by noice
 
               # work plugins
               # TODO put in a different category
