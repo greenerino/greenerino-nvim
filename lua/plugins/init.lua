@@ -324,3 +324,10 @@ require('noice').setup({
     }
   }
 })
+
+--Twilight
+require('twilight').setup({
+  treesitter = true,
+  context = 15
+})
+vim.keymap.set('n', 'zT', ':Twilight<CR>', { desc = 'Toggle Twilight' })

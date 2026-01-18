@@ -112,6 +112,11 @@ return {
     commit = '4debb74b0a3e530f1b18e5b7dff98a40b2ad26f1',
     lazy = false
   },
+  {
+    'folke/twilight.nvim',
+    commit = '664e752f4a219801265cc3fc18782b457b58c1e1',
+    lazy = false
+  },
 
 
   -- Work Plugins

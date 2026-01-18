@@ -155,6 +155,7 @@
               nui-nvim # required by noice
               vim-sexp
               vim-sexp-mappings-for-regular-people
+              twilight-nvim
 
               # work plugins
               # TODO put in a different category
