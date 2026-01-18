@@ -11,8 +11,8 @@ require('nvim-tree').setup({
   },
 })
 
-vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
-vim.keymap.set('n', '<C-f>', ':NvimTreeFindFile<CR>')
+vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { desc = 'Toggle NvimTree' })
+vim.keymap.set('n', '<C-f>', ':NvimTreeFindFile<CR>', { desc = 'Find File in NvimTree' })
 
 local nvim_tree_ensure_state = function()
   local api = require('nvim-tree.api')
