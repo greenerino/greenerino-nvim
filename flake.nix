@@ -121,6 +121,7 @@
               nixd
               hyprls
               yaml-language-server
+              tinymist
 
               # work LSPs
               # TODO put in a different category
@@ -156,6 +157,7 @@
               vim-sexp
               vim-sexp-mappings-for-regular-people
               twilight-nvim
+              typst-preview-nvim
 
               # work plugins
               # TODO put in a different category
@@ -292,7 +294,7 @@
             name = defaultPackageName;
             packages = [ defaultPackage ];
             inputsFrom = [ ];
-            shellHook = '''';
+            shellHook = "";
           };
         };
 

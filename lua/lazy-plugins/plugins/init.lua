@@ -117,6 +117,11 @@ return {
     commit = '664e752f4a219801265cc3fc18782b457b58c1e1',
     lazy = false
   },
+  {
+    'chomosuke/typst-preview.nvim',
+    commit = '64469f832c4d214683c12e0fceba98055cb1ce3b',
+    lazy = false
+  },
 
 
   -- Work Plugins

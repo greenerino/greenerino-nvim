@@ -158,6 +158,7 @@ vim.lsp.enable({
   'luals',
   'godot',
   'yaml',
+  'typst',
 
   -- Work related
   'clojure',
