@@ -268,7 +268,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 -- Comments
-require('Comment').setup()
+require('Comment').setup({
+  toggler = {
+    block = 'gpc'
+  },
+  opleader = {
+    block = 'gp'
+  }
+})
 
 -- Conjure
 vim.g['conjure#mapping#doc_word'] = 'gk'
