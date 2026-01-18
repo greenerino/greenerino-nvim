@@ -153,6 +153,8 @@
               snacks-nvim
               noice-nvim
               nui-nvim # required by noice
+              vim-sexp
+              vim-sexp-mappings-for-regular-people
 
               # work plugins
               # TODO put in a different category

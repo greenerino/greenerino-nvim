@@ -102,6 +102,16 @@ return {
     commit = '7bfd942445fb63089b59f97ca487d605e715f155',
     lazy = false
   },
+  {
+    'guns/vim-sexp',
+    commit = 'd8df22690b146ce07fdaf49940e3214def76a69c',
+    lazy = false
+  },
+  {
+    'tpope/vim-sexp-mappings-for-regular-people',
+    commit = '4debb74b0a3e530f1b18e5b7dff98a40b2ad26f1',
+    lazy = false
+  },
 
 
   -- Work Plugins

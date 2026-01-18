@@ -20,5 +20,7 @@
   "nvim-web-devicons": { "branch": "master", "commit": "6788013bb9cb784e606ada44206b0e755e4323d7" },
   "persistence.nvim": { "branch": "main", "commit": "b20b2a7887bd39c1a356980b45e03250f3dce49c" },
   "snacks.nvim": { "branch": "main", "commit": "fe7cfe9800a182274d0f868a74b7263b8c0c020b" },
+  "vim-sexp": { "branch": "master", "commit": "d8df22690b146ce07fdaf49940e3214def76a69c" },
+  "vim-sexp-mappings-for-regular-people": { "branch": "master", "commit": "4debb74b0a3e530f1b18e5b7dff98a40b2ad26f1" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" }
 }
