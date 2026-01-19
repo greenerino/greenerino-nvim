@@ -251,7 +251,7 @@ insert_right {
 
 insert_right {
   FileName = {
-    provider = 'FileName',
+    provider = 'FilePath',
     condition = buffer_not_empty,
     highlight = { colors.fg, colors.mid_bg }
   },
