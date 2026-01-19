@@ -158,6 +158,7 @@
               vim-sexp-mappings-for-regular-people
               twilight-nvim
               typst-preview-nvim
+              conform-nvim
 
               # work plugins
               # TODO put in a different category

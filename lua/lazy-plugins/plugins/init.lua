@@ -122,6 +122,11 @@ return {
     commit = '64469f832c4d214683c12e0fceba98055cb1ce3b',
     lazy = false
   },
+  {
+    'stevearc/conform.nvim',
+    commit = '1bf8b5b9caee51507aa51eaed3da5b0f2595c6b9',
+    lazy = false
+  },
 
 
   -- Work Plugins
