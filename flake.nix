@@ -159,6 +159,8 @@
               twilight-nvim
               typst-preview-nvim
               conform-nvim
+              vim-fugitive
+              vim-rhubarb
 
               # work plugins
               # TODO put in a different category

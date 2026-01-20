@@ -127,6 +127,16 @@ return {
     commit = '1bf8b5b9caee51507aa51eaed3da5b0f2595c6b9',
     lazy = false
   },
+  {
+    'tpope/vim-fugitive',
+    commit = '61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4',
+    lazy = false
+  },
+  {
+    'tpope/vim-rhubarb',
+    commit = '5496d7c94581c4c9ad7430357449bb57fc59f501',
+    lazy = false
+  },
 
 
   -- Work Plugins
