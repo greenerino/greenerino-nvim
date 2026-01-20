@@ -142,6 +142,11 @@ return {
     commit = '2f4ac0d1bc642049d97da909cae02a5a5bd0beab',
     lazy = false
   },
+  {
+    'VidocqH/auto-indent.nvim',
+    commit = '46801cf8857d42a20a73c40b0a5d3dfe8b2b6192',
+    lazy = false
+  },
 
 
   -- Work Plugins
@@ -150,5 +155,6 @@ return {
     'Olical/conjure',
     version = '4.58.0',
     lazy = false
+
   }
 }

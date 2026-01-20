@@ -29,6 +29,11 @@
       flake = false;
     };
 
+    "plugins-auto-indent" = {
+      url = "github:VidocqH/auto-indent.nvim?rev=46801cf8857d42a20a73c40b0a5d3dfe8b2b6192";
+      flake = false;
+    };
+
     # neovim-nightly-overlay = {
     #   url = "github:nix-community/neovim-nightly-overlay";
     # };
@@ -162,6 +167,7 @@
               vim-fugitive
               vim-rhubarb
               blink-indent
+              pkgs.neovimPlugins.auto-indent
 
               # work plugins
               # TODO put in a different category

@@ -293,3 +293,13 @@ require('twilight').setup({
   context = 15
 })
 vim.keymap.set('n', 'zT', ':Twilight<CR>', { desc = 'Toggle Twilight' })
+
+-- auto-indent
+-- Simple plugin that indents you to the correct level when pressing tab toward
+-- the beginning of a line
+require('auto-indent').setup({
+  lightmode = true,
+  indentexpr = function(lnum)
+    return require('nvim-treesitter.indent').get_indent(lnum)
+  end
+})
