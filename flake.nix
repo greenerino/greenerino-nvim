@@ -161,6 +161,7 @@
               conform-nvim
               vim-fugitive
               vim-rhubarb
+              blink-indent
 
               # work plugins
               # TODO put in a different category

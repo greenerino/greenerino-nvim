@@ -137,6 +137,11 @@ return {
     commit = '5496d7c94581c4c9ad7430357449bb57fc59f501',
     lazy = false
   },
+  {
+    'saghen/blink.indent',
+    commit = '2f4ac0d1bc642049d97da909cae02a5a5bd0beab',
+    lazy = false
+  },
 
 
   -- Work Plugins
