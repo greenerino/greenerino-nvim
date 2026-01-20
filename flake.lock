@@ -31,6 +31,23 @@
         "type": "github"
       }
     },
+    "plugins-auto-indent": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1699005956,
+        "narHash": "sha256-dubpVupLfc81Jvb4woSQ63n2+VsJCRjnvDzkFTQE2MQ=",
+        "owner": "VidocqH",
+        "repo": "auto-indent.nvim",
+        "rev": "46801cf8857d42a20a73c40b0a5d3dfe8b2b6192",
+        "type": "github"
+      },
+      "original": {
+        "owner": "VidocqH",
+        "repo": "auto-indent.nvim",
+        "rev": "46801cf8857d42a20a73c40b0a5d3dfe8b2b6192",
+        "type": "github"
+      }
+    },
     "plugins-deadcolumn": {
       "flake": false,
       "locked": {
@@ -52,6 +69,7 @@
       "inputs": {
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs",
+        "plugins-auto-indent": "plugins-auto-indent",
         "plugins-deadcolumn": "plugins-deadcolumn"
       }
     }
