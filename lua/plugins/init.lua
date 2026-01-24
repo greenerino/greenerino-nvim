@@ -154,6 +154,8 @@ if (pcall(require, 'nixCats')) then
   })
 end
 
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to definition' })
+
 -- blink.cmp
 require('blink.cmp').setup({
   keymap = {
