@@ -247,10 +247,46 @@ vim.keymap.set('n', '<leader>qs', function()
   -- This allows us to switch back.
   local p = require('persistence')
   if p.active() then
+    p.fire('SavePre')
     p.save()
+    p.fire('SavePost')
   end
   p.select()
 end, { desc = 'Open Session Menu' })
+
+-- Persistence doesn't do anything with the shada, and thus the jumplist.
+-- Attempt to save/load a session-specific shada along with the session.
+local shada_path = function()
+  local p = require('persistence')
+  local file = p.current() .. '.shada'
+  if vim.fn.filereadable(file) == 0 then
+    file = p.current({ branch = false }) .. '.shada'
+  end
+  file = file:gsub('[%%]', '__')
+  return vim.fn.fnameescape(file)
+end
+vim.api.nvim_create_autocmd({ 'User' }, {
+  pattern = 'PersistenceSavePost',
+  callback = function(event)
+    local shada = shada_path()
+    print('Saving  ' .. shada)
+    vim.cmd('wshada! ' .. shada)
+  end
+})
+vim.api.nvim_create_autocmd({ 'User' }, {
+  pattern = 'PersistenceLoadPost',
+  callback = function()
+    local shada = shada_path()
+    print('Loading ' .. shada)
+    if vim.fn.filereadable(shada) == 1 then
+      vim.cmd('clearjumps')
+      vim.cmd('rshada! ' .. shada)
+      print('...Shada loaded! ' .. shada)
+    else
+      print('...Not found')
+    end
+  end
+})
 
 
 -- snacks.dashboard
