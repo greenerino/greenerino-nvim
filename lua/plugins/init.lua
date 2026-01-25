@@ -139,6 +139,7 @@ vim.lsp.enable({
   'godot',
   'yaml',
   'typst',
+  'bash',
 
   -- Work related
   'clojure',

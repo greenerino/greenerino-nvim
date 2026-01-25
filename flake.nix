@@ -128,6 +128,10 @@
               yaml-language-server
               tinymist
 
+              bash-language-server
+              shellcheck
+              shfmt
+
               # work LSPs
               # TODO put in a different category
               clojure-lsp
