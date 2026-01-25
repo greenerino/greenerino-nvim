@@ -147,6 +147,12 @@ return {
     commit = '46801cf8857d42a20a73c40b0a5d3dfe8b2b6192',
     lazy = false
   },
+  {
+    'iamcco/markdown-preview.nvim',
+    commit = 'a923f5fc5ba36a3b17e289dc35dc17f66d0548ee',
+    build = function() vim.fn['mkdp#util#install']() end,
+    lazy = false
+  },
 
 
   -- Work Plugins
