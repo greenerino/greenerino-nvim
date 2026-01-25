@@ -172,6 +172,7 @@
               vim-rhubarb
               blink-indent
               pkgs.neovimPlugins.auto-indent
+              markdown-preview-nvim
 
               # work plugins
               # TODO put in a different category
