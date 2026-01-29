@@ -143,6 +143,7 @@ vim.lsp.enable({
 
   -- Work related
   'clojure',
+  'java',
   'ruby',
   'python',
 })

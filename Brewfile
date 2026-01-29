@@ -8,6 +8,7 @@ brew "shfmt"
 # Work dependencies
 brew "clojure-lsp"
 cask "cljstyle"
+brew "jdtls"
 brew "ruby-lsp"
 brew "python-lsp-server"
 brew "yaml-language-server"
