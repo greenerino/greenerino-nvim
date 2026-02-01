@@ -137,7 +137,6 @@ local handlers = {}
   handlers = vim.g.fugitive_browse_handlers
 end ]]
 table.insert(handlers, function(opts)
-  print('handler called')
   local remote_pattern = 'ssh://git@greene.nas:2222/'
   local gitea_root = 'http://greene.nas:7978/'
   if string.find(opts.remote, remote_pattern) then
