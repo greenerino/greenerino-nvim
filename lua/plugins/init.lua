@@ -127,6 +127,53 @@ vim.keymap.set('n', 'gb', function()
   vim.cmd('Git blame')
 end, { desc = 'Git blame' })
 
+-- Add a Gitea provider for Fugitive's :GBrowse
+-- I couldn't figure out how to correctly append to the existing list of
+-- handlers. Pulling to a local table, adding to it, and re-setting the variable
+-- would break the existing Rhubarb handler.
+-- If I manually re-add the Rhubarb handler, it seems to work.
+local handlers = {}
+--[[ if vim.g.fugitive_browse_handlers ~= nil then
+  handlers = vim.g.fugitive_browse_handlers
+end ]]
+table.insert(handlers, function(opts)
+  print('handler called')
+  local remote_pattern = 'ssh://git@greene.nas:2222/'
+  local gitea_root = 'http://greene.nas:7978/'
+  if string.find(opts.remote, remote_pattern) then
+    -- Lua doesn't use Regex. I don't feel like diving into using vim.regex,
+    -- so just hardcode a string.sub for the repo name
+    local root = gitea_root .. string.sub(opts.remote, #remote_pattern + 1, (#'.git' * -1) - 1)
+    local path = opts.path
+
+    if string.find(path, '/') == 1 then
+      path = string.sub(path, 2) -- Chop off leading /
+    end
+
+    if string.find(path, '.git/refs/heads/') == 1 then
+      return root .. '/commits/' .. string.sub(path, 17)
+    elseif string.find(path, '.git/refs/tags/') then
+      return root .. '/src/' .. string.sub(path, 16)
+    elseif string.find(path, '.git>') then
+      return root
+    elseif opts.type == 'blob' then
+      local url = root .. '/src/' .. opts.commit .. '/' .. path
+      if opts.line1 ~= 0 then
+        url = url .. '#L' .. opts.line1
+        if opts.line2 ~= 0 then
+          url = url .. '-L' .. opts.line2
+        end
+      end
+      return url
+    else
+      -- Open just a commit
+      return root .. '/commit/' .. opts.commit
+    end
+  end
+end)
+vim.g.fugitive_browse_handlers = handlers
+vim.cmd [[call insert(g:fugitive_browse_handlers, function('rhubarb#FugitiveUrl'))]]
+
 -- LSPs
 
 vim.diagnostic.config({
