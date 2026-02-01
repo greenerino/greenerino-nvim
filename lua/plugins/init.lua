@@ -171,7 +171,7 @@ table.insert(handlers, function(opts)
   end
 end)
 vim.g.fugitive_browse_handlers = handlers
-vim.cmd [[call insert(g:fugitive_browse_handlers, function('rhubarb#FugitiveUrl'))]]
+vim.cmd("call insert(g:fugitive_browse_handlers, function('rhubarb#FugitiveUrl'))")
 
 -- LSPs
 
