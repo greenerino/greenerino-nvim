@@ -266,7 +266,8 @@ require('blink.cmp').setup({
 -- conform
 require('conform').setup({
   formatters_by_ft = {
-    clojure = { 'cljstyle' }
+    clojure = { 'cljstyle' },
+    java = { 'google-java-format' }
   },
   format_on_save = {
     lsp_format = 'fallback',
