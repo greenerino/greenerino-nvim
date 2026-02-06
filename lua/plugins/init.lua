@@ -111,7 +111,9 @@ vim.keymap.set('v', '<C-u>', function()
 end, { desc = 'Live Grep Selection' })
 
 -- nvim-autopairs
-require('nvim-autopairs').setup({})
+require('nvim-autopairs').setup({
+  enable_check_bracket_line = false
+})
 
 -- nvim-surround
 require('nvim-surround').setup()
