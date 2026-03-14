@@ -9,6 +9,9 @@ require('nvim-tree').setup({
   renderer = {
     group_empty = true,
   },
+  filters = {
+    git_ignored = false
+  },
 })
 
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { desc = 'Toggle NvimTree' })
