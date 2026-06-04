@@ -1,5 +1,6 @@
 brew "lua-language-server"
 brew "tinymist"
+brew "gopls"
 
 brew "bash-language-server"
 brew "shellcheck"

@@ -127,6 +127,7 @@
               hyprls
               yaml-language-server
               tinymist
+              gopls
 
               bash-language-server
               shellcheck

@@ -191,6 +191,7 @@ vim.lsp.enable({
   'yaml',
   'typst',
   'bash',
+  'go',
 
   -- Work related
   'clojure',
