@@ -192,6 +192,7 @@ vim.lsp.enable({
   'typst',
   'bash',
   'go',
+  'javascript',
 
   -- Work related
   'clojure',

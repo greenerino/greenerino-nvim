@@ -128,6 +128,7 @@
               yaml-language-server
               tinymist
               gopls
+              typescript-language-server
 
               bash-language-server
               shellcheck
