@@ -124,6 +124,7 @@
             general = with pkgs; [
               lua-language-server
               nixd
+              nixfmt-rfc-style # Nix formatter
               hyprls
               yaml-language-server
               tinymist
