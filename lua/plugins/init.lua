@@ -361,3 +361,7 @@ require('auto-indent').setup({
     return require('nvim-treesitter.indent').get_indent(lnum)
   end
 })
+
+-- colorizer
+-- violet, #457F9B, etc.
+require('colorizer').setup()

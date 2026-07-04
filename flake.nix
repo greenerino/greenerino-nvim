@@ -176,6 +176,7 @@
               blink-indent
               pkgs.neovimPlugins.auto-indent
               markdown-preview-nvim
+              nvim-colorizer-lua
 
               # work plugins
               # TODO put in a different category
