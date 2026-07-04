@@ -154,7 +154,7 @@ return {
     lazy = false
   },
   {
-    'catgoose/nvim-colorizer.lua/',
+    'catgoose/nvim-colorizer.lua',
     commit = '81e676d3203c9eb6e4c0ccf1eba1679296ef923f',
     lazy = false
   },
