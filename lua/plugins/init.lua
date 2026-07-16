@@ -142,8 +142,8 @@ local handlers = {}
   handlers = vim.g.fugitive_browse_handlers
 end ]]
 table.insert(handlers, function(opts)
-  local remote_pattern = 'ssh://git@greene.nas:2222/'
-  local gitea_root = 'http://greene.nas:7978/'
+  local remote_pattern = 'ssh://git@bourdon.nas:2222/'
+  local gitea_root = 'http://bourdon.nas:7978/'
   if string.find(opts.remote, remote_pattern) then
     -- Lua doesn't use Regex. I don't feel like diving into using vim.regex,
     -- so just hardcode a string.sub for the repo name
