@@ -177,6 +177,7 @@
               pkgs.neovimPlugins.auto-indent
               markdown-preview-nvim
               nvim-colorizer-lua
+              zen-mode-nvim
 
               # work plugins
               # TODO put in a different category

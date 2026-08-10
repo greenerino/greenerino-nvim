@@ -158,6 +158,11 @@ return {
     commit = '81e676d3203c9eb6e4c0ccf1eba1679296ef923f',
     lazy = false
   },
+  {
+    'folke/zen-mode.nvim',
+    commit = '8564ce6d29ec7554eb9df578efa882d33b3c23a7',
+    lazy = false
+  },
 
 
   -- Work Plugins
