@@ -39,9 +39,9 @@ vim.api.nvim_create_autocmd({ 'User' }, {
 
 -- Colors
 require('catppuccin').setup({
-  auto_integrations = true
+  flavour = 'frappe'
 })
-vim.cmd('colorscheme catppuccin-frappe')
+vim.cmd('colorscheme catppuccin-nvim')
 
 -- Which-key
 local wk = require('which-key')
@@ -56,34 +56,13 @@ wk.add {
   },
 }
 
-
 -- Treesitter
-require('nvim-treesitter.configs').setup {
-  highlight = { enable = true },
-  textobjects = {
-    swap = {
-      enable = true,
-      swap_next = {
-        ['<leader>sw'] = '@parameter.inner',
-      },
-      swap_previous = {
-        ['<leader>sb'] = '@parameter.inner',
-      },
-    },
-  },
-}
-vim.api.nvim_create_autocmd({ 'FileType' }, {
-  callback = function()
-    vim.schedule(function()
-      if require('nvim-treesitter.parsers').has_parser() then
-        vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
-        vim.opt.foldmethod = 'expr'
-      else
-        vim.opt.foldmethod = 'syntax'
-      end
-      vim.opt.foldlevel = 99
-    end)
-  end,
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldmethod = 'expr'
+vim.wo.foldlevel = 99
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { '<filetype>' },
+  callback = function() vim.treesitter.start() end,
 })
 
 -- vim-notify
@@ -117,9 +96,6 @@ end, { desc = 'Live Grep Selection' })
 require('nvim-autopairs').setup({
   enable_check_bracket_line = false
 })
-
--- nvim-surround
-require('nvim-surround').setup()
 
 -- gitsigns
 vim.keymap.set('n', ']c', ':Gitsigns nav_hunk next<CR>', { desc = 'Go to next Git hunk' })

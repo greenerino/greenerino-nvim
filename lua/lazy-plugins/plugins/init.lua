@@ -3,7 +3,7 @@
 return {
   {
     'nvim-tree/nvim-tree.lua',
-    commit = '3fb91e18a727ecc0385637895ec397dea90be42a',
+    commit = '07f541fcaa4a5ae019598240362449ab7e9812b3',
     lazy = false,
     dependencies = {
       'nvim-tree/nvim-web-devicons',
@@ -19,12 +19,7 @@ return {
     commit = '42fc28ba918343ebfd5565147a42a26580579482',
     lazy = false,
     build =
-    ':TSInstall bash clojure comment csv dockerfile fish gdscript gdshader git_config git_rebase gitattributes gitcommit gitignore graphql hcl helm html java json just make markdown markdown_inline mermaid nix python ruby rust sql ssh_config terraform toml yaml | TSUpdate'
-  },
-  {
-    'nvim-treesitter/nvim-treesitter-textobjects',
-    commit = '5ca4aaa6efdcc59be46b95a3e876300cfead05ef',
-    lazy = false,
+    ':TSInstall stable | TSUpdate'
   },
   {
     'rcarriga/nvim-notify',
@@ -33,28 +28,28 @@ return {
   },
   {
     'ibhagwan/fzf-lua',
-    commit = '3170d98240266a68c2611fc63260c3ab431575aa',
+    commit = '23f71140754b9162551dc8ccc1d6346e4275ecc2',
     lazy = false,
     dependencies = { 'nvim-tree/nvim-web-devicons' },
   },
   {
     'windwp/nvim-autopairs',
-    commit = '7a2c97cccd60abc559344042fefb1d5a85b3e33b',
+    commit = '7b9923abad60b903ece7c52940e1321d39eccc79',
     lazy = false
   },
   {
     'kylechui/nvim-surround',
-    commit = 'fcfa7e02323d57bfacc3a141f8a74498e1522064',
+    commit = '2e93e154de9ff326def6480a4358bfc149d5da2c',
     lazy = false
   },
   {
     'lewis6991/gitsigns.nvim',
-    commit = 'cdafc320f03f2572c40ab93a4eecb733d4016d07',
+    commit = 'a462f416e2ce4744531c6256252dee99a7d34a83',
     lazy = false
   },
   {
     'calops/hmts.nvim',
-    commit = 'a32cd413f7d0a69d7f3d279c631f20cb117c8d30',
+    tag = 'v1.3.0',
     lazy = false
   },
   {
@@ -64,7 +59,7 @@ return {
   },
   {
     'saghen/blink.cmp',
-    version = '1.8.0',
+    version = '1.10.2',
     lazy = false
   },
   {
@@ -74,7 +69,7 @@ return {
   },
   {
     'catppuccin/nvim',
-    commit = 'da33755d00e09bff2473978910168ff9ea5dc453',
+    tag = 'v2.0.0',
     lazy = false
   },
   {
@@ -84,7 +79,7 @@ return {
   },
   {
     'folke/snacks.nvim',
-    commit = 'fe7cfe9800a182274d0f868a74b7263b8c0c020b',
+    commit = 'ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e',
     lazy = false
   },
   {
@@ -104,7 +99,7 @@ return {
   },
   {
     'guns/vim-sexp',
-    commit = 'd8df22690b146ce07fdaf49940e3214def76a69c',
+    commit = '1bf50921308f0188d1c1ecf8a712cc72ab2775e5',
     lazy = false
   },
   {
@@ -119,17 +114,17 @@ return {
   },
   {
     'chomosuke/typst-preview.nvim',
-    commit = '64469f832c4d214683c12e0fceba98055cb1ce3b',
+    commit = '87db18b8d19c8b0eed399f52e4c527ce5afe4817',
     lazy = false
   },
   {
     'stevearc/conform.nvim',
-    commit = '1bf8b5b9caee51507aa51eaed3da5b0f2595c6b9',
+    commit = '18aeab3d63d350dcf44d64c462cc489a3412af40',
     lazy = false
   },
   {
     'tpope/vim-fugitive',
-    commit = '61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4',
+    commit = '3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0',
     lazy = false
   },
   {
@@ -139,7 +134,7 @@ return {
   },
   {
     'saghen/blink.indent',
-    commit = '2f4ac0d1bc642049d97da909cae02a5a5bd0beab',
+    tag = 'v2.1.2',
     lazy = false
   },
   {
@@ -155,12 +150,12 @@ return {
   },
   {
     'catgoose/nvim-colorizer.lua',
-    commit = '81e676d3203c9eb6e4c0ccf1eba1679296ef923f',
+    commit = '5cfe7fffbd01e17b3c1e14af85d5febdef88bd8c',
     lazy = false
   },
   {
     'folke/zen-mode.nvim',
-    commit = '8564ce6d29ec7554eb9df578efa882d33b3c23a7',
+    tag = 'v1.4.1',
     lazy = false
   },
 
@@ -169,7 +164,7 @@ return {
   -- It's ok for these versions to drift from Nix
   {
     'Olical/conjure',
-    version = '4.58.0',
+    version = '4.60.0',
     lazy = false
 
   }

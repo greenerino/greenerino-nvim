@@ -21,7 +21,7 @@
   description = "Greenerino's Neovim config via nixCats";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
     "plugins-deadcolumn" = {
@@ -135,8 +135,6 @@
               shellcheck
               shfmt
 
-              # work LSPs
-              # TODO put in a different category
               clojure-lsp
               python313Packages.python-lsp-server
             ];
@@ -151,7 +149,6 @@
               which-key-nvim
               catppuccin-nvim
               nvim-treesitter.withAllGrammars
-              nvim-treesitter-textobjects
               nvim-notify
               fzf-lua
               nvim-autopairs
@@ -178,10 +175,7 @@
               markdown-preview-nvim
               nvim-colorizer-lua
               zen-mode-nvim
-
-              # work plugins
-              # TODO put in a different category
-              conjure # Apparently also good for Lua, so maybe should be general
+              conjure
             ];
           };
 
